@@ -1,0 +1,50 @@
+/* Hierarchy 1: Young Serif (headings) + Figtree (body)
+   Major second scale (1.125), 18px base */
+
+:root {
+  --ink: #1c2b2a;
+  --paper: #eaf7f4;
+  --rule: #a9d8cd;
+  --accent: #c21e63;   /* emphasis */
+  --link: #0b6457;
+  --panel: #d3ede6;
+  --nav: #1c2b2a;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, .page-title {
+  font-family: "Young Serif", serif;
+  font-weight: 400;     /* Young Serif has one weight */
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.page-title { font-size: 2.027rem; }  /* 32.44px, r^5 */
+h1 { font-size: 1.802rem; }           /* 28.83px, r^4 */
+h2 { font-size: 1.602rem; }           /* 25.63px, r^3 */
+h3 { font-size: 1.424rem; }           /* 22.78px, r^2 */
+h4 {
+  font-size: 1.266rem;                /* 20.25px, r^1 */
+  color: var(--link);                 /* color separates H4 from body */
+}
+
+em {
+  font-style: normal;   /* no faked italic: Young Serif has none */
+  color: var(--accent);
+  font-weight: 600;
+}
+
+a {
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

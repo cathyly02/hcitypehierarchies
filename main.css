@@ -1,0 +1,121 @@
+/* Shared layout for all type hierarchy pages.
+   Each page's own stylesheet sets typefaces, sizes and colors. */
+
+:root {
+  --ink: #231b4d;
+  --paper: #f4f0ff;
+  --rule: #c9c0f2;
+  --panel: #e6e0fb;
+  --accent: #6c4bff;
+  --link: #b4380f;
+  --nav: #231b4d;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-size: 1.125rem;   /* 18px base */
+  line-height: 1.45;
+}
+
+p {
+  max-width: 65ch;        /* keeps lines in the 50-75 character range */
+  margin-bottom: 0;
+}
+
+/* Specs typeface: Red Hat Mono (variable), used only for specs */
+.mono {
+  font-family: "Red Hat Mono", monospace;
+}
+
+/* Navbar */
+.site-navbar {
+  background-color: var(--nav);
+}
+
+.site-navbar .navbar-brand {
+  font-family: "Red Hat Mono", monospace;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.site-navbar .nav-link {
+  font-family: "Red Hat Mono", monospace;
+  color: #d9d4f2;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active,
+.site-navbar .nav-link.show {
+  color: #ffffff;
+}
+
+.site-navbar .dropdown-item {
+  font-family: "Red Hat Mono", monospace;
+}
+
+/* Page heading */
+.page-head {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.page-head .meta {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* One row per element: sample on the left, specs on the right */
+.level {
+  border-top: 2px solid var(--rule);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.row-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  opacity: 0.75;
+}
+
+.spec-panel {
+  background-color: var(--panel);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  margin: 1rem 0 0;
+  overflow-x: auto;
+}
+
+@media (min-width: 992px) {
+  .spec-panel {
+    margin-top: 0;
+  }
+}
+
+/* Links and focus */
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.site-footer {
+  border-top: 2px solid var(--rule);
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

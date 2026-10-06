@@ -1,0 +1,91 @@
+/* Hierarchy 2: Big Shoulders only (variable: wght 100-900, opsz 10-72)
+   Major second scale (1.125), 18px base */
+
+:root {
+  --ink: #0e2a47;
+  --paper: #e8f4fb;
+  --rule: #9fcde6;
+  --accent: #c8102e;   /* flag red, for emphasis */
+  --link: #0b6fa4;     /* lake blue, for links */
+  --panel: #d2e8f5;
+  --nav: #0e2a47;
+}
+
+body {
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;   /* browser picks the text-friendly opsz */
+}
+
+h1, h2, h3, h4, .page-title {
+  font-family: "Big Shoulders", sans-serif;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.page-title {
+  font-size: 2.027rem;                              /* 32.44px, r^5 */
+  font-variation-settings: "wght" 900, "opsz" 72;
+}
+h1 {
+  font-size: 1.802rem;                              /* 28.83px, r^4 */
+  font-variation-settings: "wght" 800, "opsz" 72;
+}
+h2 {
+  font-size: 1.602rem;                              /* 25.63px, r^3 */
+  font-variation-settings: "wght" 750, "opsz" 72;
+}
+h3 {
+  font-size: 1.424rem;                              /* 22.78px, r^2 */
+  font-variation-settings: "wght" 700, "opsz" 48;
+}
+h4 {
+  font-size: 1.266rem;                              /* 20.25px, r^1 */
+  font-variation-settings: "wght" 650, "opsz" 36;
+  color: var(--accent);
+}
+
+em {
+  font-style: normal;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+a {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Axis playground */
+.axis-demo {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+  border-top: 2px solid var(--rule);
+}
+
+.axis-word {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  margin: 1rem 0 1.5rem;
+  font-variation-settings: "wght" 400, "opsz" 72;
+}
+
+.axis-controls label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.axis-controls input[type="range"] {
+  width: 100%;
+  max-width: 28rem;
+  accent-color: var(--accent);
+  margin-bottom: 1rem;
+}

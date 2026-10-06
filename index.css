@@ -1,0 +1,101 @@
+/* Index: Big Shoulders title, Figtree text, card headings in each page's typeface */
+
+:root {
+  --ink: #231b4d;
+  --paper: #fbfaff;
+  --rule: #d9d2f5;
+  --accent: #6c4bff;
+  --nav: #231b4d;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+}
+
+.cover-title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: clamp(3.25rem, 9vw, 6rem);
+  line-height: 0.95;
+  margin: 3rem 0 1.25rem;
+  font-variation-settings: "wght" 900, "opsz" 72;
+  animation: weight-in 1.6s ease-out 1;
+}
+
+/* One load moment: the title sweeps through the weight axis */
+@keyframes weight-in {
+  from { font-variation-settings: "wght" 100, "opsz" 72; }
+  to   { font-variation-settings: "wght" 900, "opsz" 72; }
+}
+
+.level-card {
+  height: 100%;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.level-card .card-title {
+  font-size: 1.802rem;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.level-card .mono {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.level-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  font-family: "Red Hat Mono", monospace;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.card-1 { background-color: #eaf7f4; }
+.card-1 .card-title { font-family: "Young Serif", serif; }
+.card-1 .btn { background-color: #0b6457; border-color: #0b6457; }
+
+.card-2 { background-color: #e8f4fb; }
+.card-2 .card-title { font-family: "Big Shoulders", sans-serif; font-variation-settings: "wght" 800, "opsz" 72; }
+.card-2 .btn { background-color: #0b6fa4; border-color: #0b6fa4; }
+
+.card-3 { background-color: #f4f0ff; }
+.card-3 .card-title { font-family: "Figtree", sans-serif; font-weight: 800; }
+.card-3 .btn { background-color: #6c4bff; border-color: #6c4bff; }
+
+.scales {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.scales h2 {
+  font-family: "Big Shoulders", sans-serif;
+  font-variation-settings: "wght" 800, "opsz" 72;
+  font-size: 2.281rem;
+  margin-bottom: 1rem;
+}
+
+.scales p + p {
+  margin-top: 1rem;
+}
+
+.scale-table {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  max-width: 34rem;
+}
+
+.scale-table th,
+.scale-table td {
+  background-color: transparent;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent);
+  font-weight: 600;
+}
